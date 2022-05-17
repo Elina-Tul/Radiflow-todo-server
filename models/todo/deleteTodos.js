@@ -8,7 +8,7 @@ function deleteTodos(req, res) {
     }
     delete todoListData[idToDelete];
 
-    res.status(204);
+    res.status(204).send();
 }
 
 module.exports = deleteTodos;
