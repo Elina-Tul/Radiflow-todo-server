@@ -8,7 +8,7 @@ function createTodos(req, res) {
         return;
     }
 
-    if(Object.keys(todoListData).length === 2) {
+    if(Object.keys(todoListData).length === 10) {
         res.status(400).send({ error: 'sorry, max 10 todos!' });
         return;
     }
