@@ -12,11 +12,11 @@ router.post('/', function(req, res, next) {
   createTodos(req, res);
 });
 
-router.put('/{:id}', function(req, res, next) {
+router.put('/:id', function(req, res, next) {
   updateTodos(req, res);
 });
 
-router.delete('/{:id}', function(req, res, next) {
+router.delete('/:id', function(req, res, next) {
   deleteTodos(req, res);
 });
 
