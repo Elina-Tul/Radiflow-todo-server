@@ -7,7 +7,6 @@ function deleteTodos(req, res) {
         res.status(200).send({ error: 'id not found'});
     }
     delete todoListData[idToDelete];
-    console.log(todoListData);
 
     res.status(204);
 }

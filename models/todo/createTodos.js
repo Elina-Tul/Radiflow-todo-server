@@ -5,7 +5,14 @@ function createTodos(req, res) {
     const { description } = req.body;
     if(!description) {
         res.status(400).send({ error: 'description not provided' });
+        return;
     }
+
+    if(Object.keys(todoListData).length === 2) {
+        res.status(400).send({ error: 'sorry, max 10 todos!' });
+        return;
+    }
+
     const todoId = uuidv4();
     todoListData[todoId] = description;
 
